@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.meta.xr.sdk.voice": "85.0.1",
+    "com.meta.xr.sdk.audio": "64.0.0",
     "com.meta.xr.sdk.voice.dictation": "64.0.0",
     "com.unity.2d.animation": "16.0.0",
     "com.unity.2d.aseprite": "6.0.0",
