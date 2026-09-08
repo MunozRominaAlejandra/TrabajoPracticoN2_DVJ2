@@ -26,8 +26,6 @@ MonoBehaviour:
   m_Name: MetaSAT
   m_EditorClassIdentifier: Meta.WitAi::Meta.WitAi.Data.Configuration.WitConfiguration
   _clientAccessToken: YW7AM5OOVSW5XKGYKFE2S2HLC2WHC3UI
-  editorVersionTag: 
-  buildVersionTag: 
   _appInfo:
     name: Built-in Models
     id: voiceSDK_es
@@ -813,11 +811,9 @@ MonoBehaviour:
       gender: male
       styles: []
       supported_features: []
-  _configData:
-  - {fileID: -8085394744231277088}
+  _configData: []
   _configurationId: 37d1ae37-2513-441b-bf10-2b0e88def2dd
-  _requestType: 0
-  _requestTimeoutMs: 10000
+  timeoutMS: 10000
   endpointConfiguration:
     _uriScheme: 
     _authority: 
@@ -830,10 +826,10 @@ MonoBehaviour:
     _event: 
     _converse: 
   isDemoOnly: 0
-  useIntentAttributes: 1
   useConduit: 1
   _manifestLocalPath: ConduitManifest-7c0c64cb-c00f-4abc-8a20-f39305101517.json
   excludedAssemblies:
   - Oculus.Voice.Demo, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   - Meta.WitAi.Samples, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   relaxedResolution: 0
+  _lastRefreshSeconds: 1788877944.2569704

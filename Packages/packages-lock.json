@@ -1,8 +1,15 @@
 {
   "dependencies": {
-    "com.meta.xr.sdk.voice": {
-      "version": "85.0.1",
+    "com.meta.xr.sdk.audio": {
+      "version": "64.0.0",
       "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.meta.xr.sdk.voice": {
+      "version": "64.0.0",
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
