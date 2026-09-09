@@ -75,10 +75,26 @@ public class ProjectileMovement2D : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        // Ignorar al jugador o elementos no etiquetados
+        if (other.CompareTag("Player") || other.CompareTag("Untagged")) return;
+
         if (other.CompareTag("Enemy"))
         {
             Debug.Log($"¡Impacto en enemigo 2D!: {other.name}");
+
+            // --- LLAMADA AL TEXT-TO-SPEECH ---
+            if (TextToSpeechManager.Instance != null)
+            {
+                TextToSpeechManager.Instance.Speak("Enemigo eliminado");
+            }
+
+            // Destruir el objeto enemigo
+            Destroy(other.gameObject);
+
+            // Destruir este proyectil
             Destroy(gameObject);
         }
     }
+
+
 }
