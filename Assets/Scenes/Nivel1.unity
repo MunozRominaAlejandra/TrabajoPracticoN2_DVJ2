@@ -224,12 +224,20 @@ PrefabInstance:
       value: Golem_cold
       objectReference: {fileID: 0}
     - target: {fileID: 5025701379532122980, guid: 61641d362080b7649a250bd3f6bb4e3c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5025701379532122980, guid: 61641d362080b7649a250bd3f6bb4e3c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7531
+      objectReference: {fileID: 0}
+    - target: {fileID: 5025701379532122980, guid: 61641d362080b7649a250bd3f6bb4e3c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.07371
+      value: -0.15
       objectReference: {fileID: 0}
     - target: {fileID: 5025701379532122980, guid: 61641d362080b7649a250bd3f6bb4e3c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.3891
+      value: -0.38
       objectReference: {fileID: 0}
     - target: {fileID: 5025701379532122980, guid: 61641d362080b7649a250bd3f6bb4e3c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -281,12 +289,20 @@ PrefabInstance:
       value: Mago
       objectReference: {fileID: 0}
     - target: {fileID: 7187971212381245034, guid: 59d701dfdb8df2f42a0a07f9ebe19e88, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.88333315
+      objectReference: {fileID: 0}
+    - target: {fileID: 7187971212381245034, guid: 59d701dfdb8df2f42a0a07f9ebe19e88, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9355574
+      objectReference: {fileID: 0}
+    - target: {fileID: 7187971212381245034, guid: 59d701dfdb8df2f42a0a07f9ebe19e88, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.75
+      value: 4.9652
       objectReference: {fileID: 0}
     - target: {fileID: 7187971212381245034, guid: 59d701dfdb8df2f42a0a07f9ebe19e88, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.31
+      value: 0.1871
       objectReference: {fileID: 0}
     - target: {fileID: 7187971212381245034, guid: 59d701dfdb8df2f42a0a07f9ebe19e88, type: 3}
       propertyPath: m_LocalPosition.z
@@ -338,12 +354,20 @@ PrefabInstance:
       value: Golem_fire
       objectReference: {fileID: 0}
     - target: {fileID: 3659905410360859437, guid: 6884e6aded2091647b974984c1d50b27, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7319
+      objectReference: {fileID: 0}
+    - target: {fileID: 3659905410360859437, guid: 6884e6aded2091647b974984c1d50b27, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6785
+      objectReference: {fileID: 0}
+    - target: {fileID: 3659905410360859437, guid: 6884e6aded2091647b974984c1d50b27, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.31
+      value: -6.17
       objectReference: {fileID: 0}
     - target: {fileID: 3659905410360859437, guid: 6884e6aded2091647b974984c1d50b27, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.24
+      value: -0.41
       objectReference: {fileID: 0}
     - target: {fileID: 3659905410360859437, guid: 6884e6aded2091647b974984c1d50b27, type: 3}
       propertyPath: m_LocalPosition.z

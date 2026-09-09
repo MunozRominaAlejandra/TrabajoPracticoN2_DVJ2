@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 7187971212381245034}
   - component: {fileID: 6163414449164440981}
   - component: {fileID: 2935331583411301222}
+  - component: {fileID: 873642571004764158}
+  - component: {fileID: 302236835242005999}
   m_Layer: 0
   m_Name: Mago
   m_TagString: Untagged
@@ -115,3 +117,34 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &873642571004764158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4144335331916256142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab851b9e1601e3849b09dfe84c47955e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  voiceExperience: {fileID: 0}
+  prefabFuego: {fileID: 7702679315063342540, guid: b7906e8d4e40dbc48aa33e440fcaf2f1, type: 3}
+  prefabHielo: {fileID: 7298759165624512691, guid: e6da152c54fbfdd4ba24ac3dc16a79c2, type: 3}
+  puntoDeDisparo: {fileID: 0}
+  velocidadMovimiento: 5
+  umbralVolumenAlto: 0.25
+  playerAnimations: {fileID: 302236835242005999}
+--- !u!114 &302236835242005999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4144335331916256142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b6d0a4d940d814192971cadeb4d722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimations

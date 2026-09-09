@@ -20,6 +20,9 @@ public class PlayerController : MonoBehaviour
     [Header("Sensibilidad de Voz Alta")]
     [SerializeField] private float umbralVolumenAlto = 0.25f;
 
+    [Header("Animaciones")]
+    [SerializeField] private PlayerAnimations playerAnimations;
+
     private float volumenActualMic = 0f;
 
     private void OnEnable()
@@ -86,10 +89,12 @@ public class PlayerController : MonoBehaviour
         // Evalúa las palabras clave en la transcripción
         if (transcripcion.Contains("fuego"))
         {
+            //playerAnimations.Attack(1, true);
             EjecutarAtaque(prefabFuego, cantidadProyectiles);
         }
         else if (transcripcion.Contains("hielo"))
         {
+            playerAnimations.Attack(2, true);
             EjecutarAtaque(prefabHielo, cantidadProyectiles);
         }
     }
