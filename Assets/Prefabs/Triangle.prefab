@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6384456873677986940}
   - component: {fileID: 8154574632868647314}
   - component: {fileID: 8624978560340391355}
+  - component: {fileID: -9169199244767093605}
   m_Layer: 0
   m_Name: Triangle
   m_TagString: Untagged
@@ -120,3 +121,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-9169199244767093605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7298759165624512691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5753075d1094378439fc9de572a218bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Proyectil
+  velocidad: 12
+  tiempoDeVida: 3
