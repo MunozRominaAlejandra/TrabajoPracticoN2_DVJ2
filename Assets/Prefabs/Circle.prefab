@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8447231058242812968}
   - component: {fileID: 7285630773279997201}
   - component: {fileID: 2325776391477799604}
+  - component: {fileID: 5219382511921639733}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -123,6 +124,7 @@ Rigidbody2D:
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!114 &7285630773279997201
+--- !u!114 &5219382511921639733
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

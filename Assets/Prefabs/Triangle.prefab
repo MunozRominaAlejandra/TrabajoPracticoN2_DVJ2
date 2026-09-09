@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8624978560340391355}
   - component: {fileID: 4592026694611596246}
   - component: {fileID: 7787184379085240287}
+  - component: {fileID: -9169199244767093605}
   m_Layer: 0
   m_Name: Triangle
   m_TagString: Untagged
@@ -123,6 +124,7 @@ Rigidbody2D:
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!114 &4592026694611596246
+--- !u!114 &-9169199244767093605
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
