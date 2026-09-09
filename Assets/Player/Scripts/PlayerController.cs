@@ -18,7 +18,8 @@ public class PlayerController : MonoBehaviour
 
     [Header("Sensibilidad de Voz Alta")]
     [SerializeField] private float umbralVolumenAlto = 0.25f;
-
+    [Header("Animaciones")]
+    [SerializeField] private PlayerAnimations playerAnimations;
     private float volumenMaximoRegistrado = 0f;
     private UIManager uiManager;
 
@@ -67,7 +68,7 @@ public class PlayerController : MonoBehaviour
         transform.Translate(movimiento * velocidadMovimiento * Time.deltaTime);
     }
 
-    // --- MÉTODOS DE VOICE SDK (Cambiados a Public) ---
+    // --- MÃ‰TODOS DE VOICE SDK (Cambiados a Public) ---
 
     public void OnStartListening()
     {
@@ -86,41 +87,43 @@ public class PlayerController : MonoBehaviour
     {
         if (string.IsNullOrEmpty(transcripcion)) return;
 
-        // 1. Convertir a minúsculas y quitar espacios en los extremos
+        // 1. Convertir a minÃºsculas y quitar espacios en los extremos
         string textoLimpio = transcripcion.ToLower().Trim();
 
-        // 2. Limpiar signos de puntuación comunes que Meta Voice suele añadir al final
+        // 2. Limpiar signos de puntuaciÃ³n comunes que Meta Voice suele aÃ±adir al final
         textoLimpio = textoLimpio.Replace(".", "")
                                  .Replace(",", "")
                                  .Replace("!", "")
                                  .Replace("?", "")
-                                 .Replace("á", "a")
-                                 .Replace("é", "e")
-                                 .Replace("í", "i")
-                                 .Replace("ó", "o")
-                                 .Replace("ú", "u");
+                                 .Replace("Ã¡", "a")
+                                 .Replace("Ã©", "e")
+                                 .Replace("Ã­", "i")
+                                 .Replace("Ã³", "o")
+                                 .Replace("Ãº", "u");
 
         // Imprimimos el texto exacto ya procesado entre corchetes para depurar
         Debug.Log($"<color=cyan>[TEXTO RECONOCIDO PROCESADO]:</color> \"{textoLimpio}\"");
 
-        // Evalúa si el volumen fue alto
+        // EvalÃºa si el volumen fue alto
         bool esVozAlta = volumenMaximoRegistrado >= umbralVolumenAlto;
         int cantidadProyectiles = esVozAlta ? 2 : 1;
 
         if (esVozAlta)
         {
-            Debug.Log($"¡Voz alta detectada! Vol Máx: {volumenMaximoRegistrado:F2}. Lanzando ataque doble.");
+            Debug.Log($"Â¡Voz alta detectada! Vol MÃ¡x: {volumenMaximoRegistrado:F2}. Lanzando ataque doble.");
         }
 
-        // 3. Comprobación usando Contains
+        // 3. ComprobaciÃ³n usando Contains
         if (textoLimpio.Contains("fuego"))
         {
-            Debug.Log("<color=yellow>-> Entró al IF de FUEGO</color>");
+            Debug.Log("<color=yellow>-> EntrÃ³ al IF de FUEGO</color>");
+            playerAnimations.Attack(1, true);
             EjecutarAtaque(prefabFuego, cantidadProyectiles);
         }
         else if (textoLimpio.Contains("hielo"))
         {
-            Debug.Log("<color=yellow>-> Entró al IF de HIELO</color>");
+            Debug.Log("<color=yellow>-> EntrÃ³ al IF de HIELO</color>");
+            playerAnimations.Attack(2, true);
             EjecutarAtaque(prefabHielo, cantidadProyectiles);
         }
         else
@@ -133,7 +136,7 @@ public class PlayerController : MonoBehaviour
     {
         if (prefabAtaque == null)
         {
-            Debug.LogError("¡ERROR!: No has asignado el Prefab en el Inspector del PlayerController.");
+            Debug.LogError("Â¡ERROR!: No has asignado el Prefab en el Inspector del PlayerController.");
             return;
         }
 
@@ -144,7 +147,7 @@ public class PlayerController : MonoBehaviour
         {
             Vector3 offset = new Vector3(0f, i * 0.4f, 0f);
             GameObject nuevoProyectil = Instantiate(prefabAtaque, posicionOrigen + offset, Quaternion.identity);
-            Debug.Log($"<color=green>¡ÉXITO!</color> Se creó el proyectil {nuevoProyectil.name} en la escena.");
+            Debug.Log($"<color=green>Â¡Ã‰XITO!</color> Se creÃ³ el proyectil {nuevoProyectil.name} en la escena.");
         }
     }
 
@@ -165,11 +168,11 @@ public class PlayerController : MonoBehaviour
         if (uiManager != null)
         {
             uiManager.ModificarVida(-cantidad);
-            Debug.Log($"¡Daño recibido! Restados {cantidad} de vida.");
+            Debug.Log($"Â¡DaÃ±o recibido! Restados {cantidad} de vida.");
         }
         else
         {
-            // Reintenta buscar si no se asignó en Start
+            // Reintenta buscar si no se asignÃ³ en Start
             uiManager = Object.FindAnyObjectByType<UIManager>();
             if (uiManager != null) uiManager.ModificarVida(-cantidad);
         }

@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4487146209549917638}
   - component: {fileID: 7062337959893186717}
   - component: {fileID: 8447231058242812968}
+  - component: {fileID: 7285630773279997201}
+  - component: {fileID: 2325776391477799604}
   - component: {fileID: 5219382511921639733}
   m_Layer: 0
   m_Name: Circle
@@ -121,6 +123,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7285630773279997201
 --- !u!114 &5219382511921639733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,3 +138,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Proyectil
   velocidad: 12
   tiempoDeVida: 3
+--- !u!58 &2325776391477799604
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7702679315063342540}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 5
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.5
